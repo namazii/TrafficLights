@@ -27,8 +27,14 @@ class ViewController: UIViewController {
         greenView.alpha = 0.3
         
         buttonTrafic.layer.cornerRadius = 10
+        buttonTrafic.setTitle("Start", for: .normal)
+        
     }
 
-
+    @IBAction func buttonTrafficPressed() {
+        redView.alpha = 1
+        buttonTrafic.setTitle("Next", for: .normal)
+    }
+    
 }
 
