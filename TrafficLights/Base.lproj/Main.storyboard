@@ -73,7 +73,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="buttonTrafic" destination="6bw-36-8AR" id="vPd-fv-wzz"/>
+                        <outlet property="buttonTraffic" destination="6bw-36-8AR" id="vPd-fv-wzz"/>
                         <outlet property="greenView" destination="hgA-1P-YfG" id="nHj-J7-nsw"/>
                         <outlet property="redView" destination="b7O-sN-N8D" id="VoB-gX-j4g"/>
                         <outlet property="yellowView" destination="jEI-ka-aD1" id="YUp-1Y-5li"/>

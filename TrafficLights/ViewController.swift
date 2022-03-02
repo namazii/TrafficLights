@@ -12,29 +12,45 @@ class ViewController: UIViewController {
     @IBOutlet weak var redView: UIView!
     @IBOutlet weak var yellowView: UIView!
     @IBOutlet weak var greenView: UIView!
-    @IBOutlet weak var buttonTrafic: UIButton!
+    @IBOutlet weak var buttonTraffic: UIButton!
+    
+    private var counter = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        redView.layer.cornerRadius = 66
+        redView.layer.cornerRadius = 65
         redView.alpha = 0.3
         
-        yellowView.layer.cornerRadius = 66
+        yellowView.layer.cornerRadius = 65
         yellowView.alpha = 0.3
         
-        greenView.layer.cornerRadius = 66
+        greenView.layer.cornerRadius = 65
         greenView.alpha = 0.3
         
-        buttonTrafic.layer.cornerRadius = 10
-        buttonTrafic.setTitle("Start", for: .normal)
+        buttonTraffic.layer.cornerRadius = 10
+        buttonTraffic.setTitle("Start", for: .normal)
         
     }
 
     @IBAction func buttonTrafficPressed() {
-        redView.alpha = 1
-        buttonTrafic.setTitle("Next", for: .normal)
+        
+        buttonTraffic.setTitle("Next", for: .normal)
+        
+        switch counter {
+        case 0:
+            redView.alpha = 1
+            greenView.alpha = 0.3
+            counter = 1
+        case 1:
+            redView.alpha = 0.3
+            yellowView.alpha = 1
+            counter = 2
+        default:
+            yellowView.alpha = 0.3
+            greenView.alpha = 1
+            counter = 0
+        }
     }
-    
 }
 
